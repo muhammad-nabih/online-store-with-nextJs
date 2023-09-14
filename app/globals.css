@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: pacifico;
+  src: url(../public/fonts/Pacifico.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../public/fonts/poppins/Poppins-Thin.ttf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../public/fonts/poppins/Poppins-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../public/fonts/poppins/Poppins-Black.ttf);
+  font-weight: 900;
+}
+
+
+
+
+html {
+  background: linear-gradient(45deg, #090909, #0c1d20, #04171c, rgba(4, 56, 67, 1))
+}
+
+* {
+  font-family: "poppins";
+  font-weight: bold;
+}
+
+.homePage header {
+  background-color: rgba(0, 0, 0, 0.882);
+  background-image: url("../public/image/landing.jpg");
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: 100% 130%;
+  background-position: bottom;
+  background-blend-mode: overlay;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+
+.image .img {
+  animation: upDown 3s infinite linear;
+}
+
+
+
+@keyframes upDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* ارتفاع العنصر في منتصف التحريك */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image .img {
+    display: none;
+  }
+
+  header .content {
+    text-align: center;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  header .content h1 {
+    font-size: 25px;
+    line-height: 1 !important;
+    margin-bottom: 20px;
+  }
+
+  header .content p {
+    font-size: 12px;
+
+    padding: 5px 10px;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+
+
+}
+
+
+.hoverClass {
+  transition: .3s;
+}
+
+.hoverClass:hover {
+  color: #1976d2;
+}
