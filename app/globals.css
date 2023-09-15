@@ -30,12 +30,13 @@
 
 
 html {
-  background: linear-gradient(45deg, #090909, #0c1d20, #04171c, rgba(4, 56, 67, 1))
+  background: linear-gradient(45deg, #090900, #0c1d20, rgba(4, 56, 67, 1))
 }
 
 * {
   font-family: "poppins";
   font-weight: bold;
+
 }
 
 .homePage header {

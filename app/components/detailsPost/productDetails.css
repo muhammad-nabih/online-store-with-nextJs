@@ -1,0 +1,8 @@
+.btn-card {
+  transition: .3s;
+}
+
+.btn-card:hover {
+  background-color: #1674d2;
+  color: #e2e2e2;
+}

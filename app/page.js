@@ -49,13 +49,12 @@ const page = () => {
         </div>
 
         <div className="image">
-          <Image
+          <img
             className="img"
             src={"image/landing2.svg"}
             alt="وصف الصورة"
-            width={400}
-            height={200}
-            style={{ maxWidth: "100%" }}
+            
+            style={{ height:"auto", width:"400px", maxWidth: "100%" }}
           />
         </div>
       </header>
