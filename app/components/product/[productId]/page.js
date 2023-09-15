@@ -1,10 +1,11 @@
-import React, { Suspense } from "react";
-import "./productId.css";
-// MATERIAL UI
-import PostDetails from "../../detailsPost/productDetails";
-import Loader from "../loader/load";
-const page = async ({ params }) => {
-  const productId = params.productId;
+import React from "react";
+import "./productId.css"; // استيراد ملف CSS لتخصيص المظهر
+import PostDetails from "../../detailsPost/productDetails"; // استيراد مكون `PostDetails` لعرض تفاصيل المنتج
+
+// هذا الملف هو صفحة تفاصيل المنتج. يستخدم `params` للوصول إلى معلومات المنتج المحددة.
+const ProductPage = async ({ params }) => {
+  const productId = params.productId; // استخراج معرف المنتج من الـ params
+
   return (
     <>
       <header>
@@ -20,26 +21,11 @@ const page = async ({ params }) => {
           Product Details
         </h1>
       </header>
-      <Suspense
-        fallback={
-          <>
-            <div
-              style={{
-                margin: "10px auto ",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              {" "}
-              <Loader />
-            </div>
-          </>
-        }
-      >
-        <PostDetails productId={productId} />
-      </Suspense>
+
+      {/* عرض تفاصيل المنتج باستخدام مكون PostDetails وإرسال معرف المنتج إليه */}
+      <PostDetails productId={productId} />
     </>
   );
 };
 
-export default page;
+export default ProductPage;

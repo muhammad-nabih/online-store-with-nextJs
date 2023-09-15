@@ -1,4 +1,4 @@
-"use client";
+"use client"; // إشارة لاستخدام النمط العميل في Next.js
 import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -8,9 +8,10 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Load from "../product/loader/load";
-import "./productDetails.css";
+import "./productDetails.css"; // استيراد ملف CSS لتخصيص المظهر
 import { blue, deepOrange } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
 const theme = createTheme({
   palette: {
     primary: { main: blue[400] },
@@ -35,7 +36,7 @@ const ProductDetails = ({ productId }) => {
         );
 
         if (!response.ok) {
-          throw new Error("====Network response was not ok");
+          throw new Error("Network response was not ok");
         }
 
         const data = await response.json();
@@ -51,6 +52,7 @@ const ProductDetails = ({ productId }) => {
   }, [productId]);
 
   if (loading) {
+    // إذا كان التحميل قيد التنفيذ، عرض مكون التحميل
     return (
       <div
         className="loader"
@@ -68,6 +70,7 @@ const ProductDetails = ({ productId }) => {
       </div>
     );
   } else {
+    // إذا تم تحميل البيانات بنجاح، عرض بيانات المنتج
     return (
       <ThemeProvider theme={theme}>
         <div

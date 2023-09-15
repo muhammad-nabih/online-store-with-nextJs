@@ -2,11 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Button from "@mui/material/Button";
 import Link from "next/link";
-const page = () => {
+
+const HomePage = () => {
   return (
     <div className="homePage">
       <header>
         <div className="content">
+          {/* عنوان الصفحة */}
           <h1
             style={{
               fontFamily: "poppins",
@@ -18,8 +20,10 @@ const page = () => {
               fontSize: "2.5rem",
             }}
           >
-            The Store Of Phones{" "}
+            The Store Of Phones
           </h1>
+
+          {/* نص الوصف */}
           <p
             style={{
               marginBottom: "10px",
@@ -33,6 +37,8 @@ const page = () => {
             Celebrate your style with our extensive online store, offering a
             diverse range of products to suit every need and taste.
           </p>
+
+          {/* زر الانتقال إلى صفحة المنتجات */}
           <Link href={"/components/product"}>
             <Button
               className="hoverClass"
@@ -48,13 +54,13 @@ const page = () => {
           </Link>
         </div>
 
+        {/* الصورة */}
         <div className="image">
           <img
             className="img"
             src={"image/landing2.svg"}
             alt="وصف الصورة"
-            
-            style={{ height:"auto", width:"400px", maxWidth: "100%" }}
+            style={{ height: "auto", width: "400px", maxWidth: "100%" }}
           />
         </div>
       </header>
@@ -62,4 +68,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HomePage;

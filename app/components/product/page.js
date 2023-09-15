@@ -1,15 +1,18 @@
 import Link from "next/link";
 
-// PRODUCTS PAGE VIEW ALL PRODUCT HERE
-const page = async () => {
+// هذه هي صفحة عرض جميع المنتجات
+const ProductsPage = async () => {
+  // استدعاء API لجلب بيانات المنتجات
   const response = await fetch("https://dummyjson.com/products");
   const data = await response.json();
 
-  const { products } = data;
+  const { products } = data; // استخراج قائمة المنتجات من البيانات
 
+  // تحويل بيانات المنتجات إلى عناصر JSX لعرضها في الصفحة
   let productsJsx = products.map((product) => {
     return (
-      <Link href={`/components/product/${product.id}`}>
+      // استخدام مكون Link لإنشاء روابط ديناميكية إلى صفحات تفاصيل المنتج
+      <Link href={`/components/product/${product.id}`} key={product.id}>
         <div
           className="product bg-zinc-200"
           style={{
@@ -55,8 +58,16 @@ const page = async () => {
   return (
     <div className="container mx-auto">
       <header>
-        <h1 className="via-red-800 p-3 bg-zinc-400 rounded w-10/12 mx-auto my-4 text-center text-2xl">
-          All Products{" "}
+        <h1
+          style={{
+            textShadow: "0px 1px 5px #1674d2",
+            letterSpacing: "10px",
+            fontFamily: "pacifico",
+            color: "#e2e2e2",
+          }}
+          className="p-1 w-10/12 mx-auto my-1 text-center text-2xl"
+        >
+          All Products
         </h1>
       </header>
 
@@ -65,15 +76,14 @@ const page = async () => {
           margin: "10px auto",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fill,minmax( 250px, 1fr))",
-
           gap: "10px",
           width: "90%",
         }}
       >
-        {productsJsx}
+        {productsJsx} {/* عرض عناصر المنتج كـ JSX */}
       </div>
     </div>
   );
 };
 
-export default page;
+export default ProductsPage;
