@@ -3,6 +3,6 @@
 }
 
 .btn-card:hover {
-  background-color: #1674d2;
-  color: #e2e2e2;
+  background-color: #1674d2 !important;
+  color: #e2e2e2 !important;
 }

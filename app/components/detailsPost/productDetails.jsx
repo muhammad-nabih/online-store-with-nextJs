@@ -118,11 +118,11 @@ const ProductDetails = ({ productId }) => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button className="btn-card" color="primary" size="large">
+              <Button className="btn-card"  size="large">
                 Buy Now
                 <ShoppingCartIcon />
               </Button>
-              <Button className="btn-card" color="primary" size="large">
+              <Button className="btn-card"  size="large">
                 Price: {productData.price}$
               </Button>
             </CardActions>
