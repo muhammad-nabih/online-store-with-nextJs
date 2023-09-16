@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 // هذه هي صفحة عرض جميع المنتجات
 const ProductsPage = async () => {
   // استدعاء API لجلب بيانات المنتجات
@@ -14,7 +14,7 @@ const ProductsPage = async () => {
       // استخدام مكون Link لإنشاء روابط ديناميكية إلى صفحات تفاصيل المنتج
       <Link href={`/components/product/${product.id}`} key={product.id}>
         <div
-          className="product bg-zinc-200"
+          className="product bg-zinc-300"
           style={{
             padding: "10px",
             borderRadius: "10px ",
@@ -26,19 +26,25 @@ const ProductsPage = async () => {
             height: "120px",
           }}
         >
-          <h2
+          <h3
             style={{
               background: "#191919",
               color: "#5d9baa",
               letterSpacing: 2,
-              fontSize: ".8rem",
+              fontSize: ".6rem",
               padding: "5px",
               fontFamily: "poppins",
               fontWeight: "bold",
+
+              display: "flex",
+              gap: "7px",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             {product.title}
-          </h2>
+            <PhoneIphoneIcon />
+          </h3>
           <p
             style={{
               width: "90%",

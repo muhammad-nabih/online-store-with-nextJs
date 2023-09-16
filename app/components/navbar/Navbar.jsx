@@ -14,6 +14,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
+
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
 
@@ -75,7 +76,7 @@ const Navbar = () => {
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               {/* شعار الشركة أو الصورة */}
-              <img src="/image/logo.png" alt="Logo " width={60} height={60} />
+              <img src="/image/phone.png" alt="Logo " width={40} height={40} />
 
               {/* عنوان الشركة */}
               <Typography
@@ -88,12 +89,12 @@ const Navbar = () => {
                   display: { xs: "none", md: "flex" },
                   fontWeight: 700,
                   letterSpacing: ".2rem",
-                  color: "#ffcb00",
+                  color: "#1971b4",
                   textDecoration: "none",
                   fontFamily: "pacifico",
                   textTransform: "uppercase",
                   letterSpacing: ".4rem",
-                  textShadow: "1px 1px 4px #d8140c; ",
+                  // textShadow: "1px 1px 1px white; ",
                 }}
               >
                 online Store
