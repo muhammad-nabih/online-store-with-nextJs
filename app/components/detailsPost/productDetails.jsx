@@ -74,6 +74,7 @@ const ProductDetails = ({ productId }) => {
     return (
       <ThemeProvider theme={theme}>
         <div
+          
           style={{
             display: "flex",
             alignItems: "center",

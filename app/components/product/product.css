@@ -1,0 +1,8 @@
+.product {
+  transition: .3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 7px 3px 2px #10101057
+}

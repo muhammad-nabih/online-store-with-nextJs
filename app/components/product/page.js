@@ -1,4 +1,6 @@
+import "./product.css"
 import Link from "next/link";
+
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 // هذه هي صفحة عرض جميع المنتجات
 const ProductsPage = async () => {
@@ -12,7 +14,7 @@ const ProductsPage = async () => {
   let productsJsx = products.map((product) => {
     return (
       // استخدام مكون Link لإنشاء روابط ديناميكية إلى صفحات تفاصيل المنتج
-      <Link href={`/components/product/${product.id}`} key={product.id}>
+      <Link  className="product" href={`/components/product/${product.id}`} key={product.id}>
         <div
           className="product bg-zinc-300"
           style={{
@@ -23,7 +25,7 @@ const ProductsPage = async () => {
             color: "black",
             fontFamily: "pacifico",
             border: "2px solid #5d9baa",
-            height: "120px",
+            height: "130px",
           }}
         >
           <h3
@@ -48,7 +50,7 @@ const ProductsPage = async () => {
           <p
             style={{
               width: "90%",
-              fontSize: ".7rem",
+              fontSize: ".6rem",
               fontWeight: "bold",
               padding: "2px",
               fontFamily: "poppins",
@@ -85,6 +87,7 @@ const ProductsPage = async () => {
           gap: "10px",
           width: "90%",
         }}
+    className="product-title"
       >
         {productsJsx} {/* عرض عناصر المنتج كـ JSX */}
       </div>
