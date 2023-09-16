@@ -88,13 +88,15 @@ const Navbar = () => {
                   display: { xs: "none", md: "flex" },
                   fontWeight: 700,
                   letterSpacing: ".2rem",
-                  color: "#1976d2",
+                  color: "#ffcb00",
                   textDecoration: "none",
                   fontFamily: "pacifico",
                   textTransform: "uppercase",
+                  letterSpacing: ".4rem",
+                  textShadow: "1px 1px 4px #d8140c; ",
                 }}
               >
-                NABIH
+                online Store
               </Typography>
 
               {/* قسم الشريط الجانبي المتجاوب */}
