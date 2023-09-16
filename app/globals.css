@@ -50,8 +50,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
+
+
+
 
 
 .image .img {
@@ -74,6 +76,20 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+
+  .homePage header {
+  
+    background-image: url("../public/image/landing-phone.jpg");
+    background-position: center;
+    background-size:400px 400px;
+
+  }
+
+
+
+
+
+
   .image .img {
     display: none;
   }
