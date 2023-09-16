@@ -76,7 +76,7 @@ const Navbar = () => {
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               {/* شعار الشركة أو الصورة */}
-              <img src="/image/phone.png" alt="Logo " width={40} height={40} />
+              <img src="/image/logo.png" alt="Logo " width={40} height={40} />
 
               {/* عنوان الشركة */}
               <Typography
